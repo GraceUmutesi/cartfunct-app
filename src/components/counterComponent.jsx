@@ -5,9 +5,19 @@ class Counter extends Component {
         count:0,
         tags:["tag1","tag2","tag3"]
     };
-    handleIncrements(){
-        console.log("Increment clicked")
+    //updating the state property, binding with this solution1
+    //use a constructor
+    // constructor(){
+    //     super();
+    //     this.handleIncrements=this.handleIncrements.bind(this)
+    // }
+    // or use handleIncrements as an arrow function
+    handleIncrements=()=>{
+        console.log("Increment clicked",this)
     }
+    // handleIncrements(){
+    //     console.log("Increment clicked",this)
+    // }
     render() {
 
         return (
