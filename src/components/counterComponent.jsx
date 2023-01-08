@@ -13,7 +13,10 @@ class Counter extends Component {
     // }
     // or use handleIncrements as an arrow function
     handleIncrements=()=>{
-        console.log("Increment clicked",this)
+        /*note: in react the state is not modified directly,
+         that is why setState method needs to be used to sync the virtual DOM
+         and the actual DOM*/
+        this.setState({count:this.state.count +1})
     }
     // handleIncrements(){
     //     console.log("Increment clicked",this)
